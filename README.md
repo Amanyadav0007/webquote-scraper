@@ -1,7 +1,7 @@
 # webquote-scraper
 # 🕸️ Quote Scraper using Node.js & Cheerio
 
-A fun web scraping project that collects motivational quotes from [quotes.toscrape.com](http://quotes.toscrape.com) using **Node.js**, **Axios**, and **Cheerio**. It also handles **pagination** to scrape quotes from all pages and saves the results in both **readable TXT format**.
+A fun web scraping project that collects motivational quotes from [quotes.toscrape.com](http://quotes.toscrape.com) using **Node.js**, **Axios**, and **Cheerio**. It also handles **pagination** to scrape quotes from all pages and saves the results in **readable TXT format**.
 
 ---
 
@@ -31,8 +31,8 @@ A fun web scraping project that collects motivational quotes from [quotes.toscra
 
 1. **Clone the repo**  
    ```bash
-   git clone https://github.com/developer-navi/quote-scraper-node.git
-   cd quote-scraper-node
+   git clone [https://github.com/Amanyadav0007/webquote-scraper.git]
+   cd webquote-scraper
    ```
 
 2. **Install dependencies**  
@@ -42,7 +42,7 @@ A fun web scraping project that collects motivational quotes from [quotes.toscra
 
 3. **Run the script**  
    ```bash
-   node index.js
+   node script.js
    ```
 
 4. **Check the output files:**
@@ -54,7 +54,7 @@ A fun web scraping project that collects motivational quotes from [quotes.toscra
 
 ```
 📦quote-scraper-node
- ┣ 📄 index.js         # Main scraping script
+ ┣ 📄 script.js         # Main scraping script
  ┣ 📄 quotes.txt       # Readable text output
  ┣ 📄 package.json     
  ┗ 📄 README.md
@@ -80,7 +80,7 @@ A fun web scraping project that collects motivational quotes from [quotes.toscra
 
 ## 👨‍💻 Author
 
-- **Aman Yadav**  
+- **Aman Yadav** [https://www.linkedin.com/in/curiouscoderaman/]
 
 ---
 
