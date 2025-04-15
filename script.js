@@ -31,16 +31,25 @@ async function scrapePage(URL) {
             });
         }
 
-        let finalData = "";
-        allQuotes.forEach((quote) => {
-            finalData += `Text: ${quote.text}\n`;
-            finalData += `Author: ${quote.author}\n`;
-            finalData += `Tags: ${quote.tags.join(", ")}\n`;
-            finalData += `\n`;
-        });
+        // Check for next pages
+        const nextPage = $(".pager .next a").attr("href");
+        if (nextPage) {
+            const newURL = `http://quotes.toscrape.com${nextPage}`;
+            await scrapePage(newURL); // Recursive call perform here
+        } else {
+            console.log("No more next pages. Scraping complete!");
+            let finalData = "";
+            allQuotes.forEach((quote) => {
+                finalData += `Text: ${quote.text}\n`;
+                finalData += `Author: ${quote.author}\n`;
+                finalData += `Tags: ${quote.tags.join(", ")}\n`;
+                finalData += `\n`;
+            });
 
-        fs.writeFileSync("quoteScrap.txt", finalData);
-        console.log("quoteScrap.txt saved successfully!");
+            fs.writeFileSync("quoteScrap.txt", finalData);
+            console.log("quoteScrap.txt saved successfully!");
+        }
+
     } catch (error) {
         console.log("Error scraping: ", error.message);
     }
